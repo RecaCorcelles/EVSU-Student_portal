@@ -1,0 +1,16 @@
+{
+    "name": "evsu/student-portal",
+    "description": "EVSU Student Portal with Google Calendar Integration",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "google/apiclient": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EVSU\\Portal\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

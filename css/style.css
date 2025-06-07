@@ -1,0 +1,392 @@
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Choose a better font later */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Theme Colors */
+:root {
+    --primary-color: #800000;       /* Maroon - main */
+    --primary-dark: #4B0000;        /* Dark Maroon - for darker hover or borders */
+    --primary-light: #330d0a;        /* Lighter Maroon - for subtle backgrounds */
+
+    --secondary-color: #FFFFFF;     /* White - for text or backgrounds */
+    --accent-color: #B7410E;        /* Dark Orange-Red - accent, hover */
+
+    --red-shade: #C03030;           /* Medium Red - alternative highlight */
+    --red-dark: #7A1B1B;            /* Dark Red - for strong accents */
+
+    --text-color-light: #FFFFFF;    /* White text */
+    --text-color-dark: #333333;     /* Dark text */
+
+    --border-color: #ddd;           /* Light border */
+    --background-light: #f9f9f9;    /* Light background */
+
+    --highlight-gold: #ffc100;      /* Added Bright Gold - new accent option */
+}
+
+.forgot-container {
+    max-width: 900px;
+    width: 90%;
+    background-color: var(--primary-light);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+    display:flex;
+}
+
+.forgot-form {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 20px;
+    background-color: var(--primary-light);
+    color: var(--text-color-dark);
+    margin-bottom: 2px;
+}
+
+.forgot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.forgot-logo {
+    flex: 1;
+    background-color: var(--primary-light);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    height: 400px;
+    position: relative;
+}
+
+.forgot-logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.forgot-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-light);
+}
+
+.forgot-form .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    background-color: #ffc100;
+    color: var(--primary-light);
+}
+
+.forgot-form .btn:hover {
+    background-color:#BA8E23;
+    color: var(--text-color-light);
+}
+
+/* General Container Styling */
+.register-container {
+    max-width: 900px;
+    width: 90%;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+    display:flex;
+}
+
+.register-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.register-logo {
+    flex: 1;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    height: 400px;
+    position: relative;
+}
+
+.register-logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.register-form {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-dark);
+    margin-bottom: 2px;
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-light);
+}
+
+.register-form .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+}
+
+.register-form .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold; 
+}
+
+.student-id,
+.password,
+.confirm-password,
+.birthdate {
+color: var(--text-color-dark);
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.2);
+}
+
+/* Login Page Specific Styles */
+.login-page {
+    background-image: url('../evsu.jpg'); /* Updated background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    z-index: 1;
+}
+
+.register-page {
+    background-image: url('../evsu.jpg'); /* Updated background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.register-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    z-index: 1;
+}
+
+.login-container {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.login-logo {
+    flex: 1;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    height: 400px; /* Fixed height */
+    position: relative; /* Added for absolute positioning of image */
+}
+
+.login-logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.login-form {
+    flex: 1;
+    padding: 2rem;
+    margin-right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color-light);
+}
+
+.login-form .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    background-color: var(--text-color-light);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.login-form .btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.login-links a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.login-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.login-links span {
+    color: var(--text-color-dark);
+    opacity: 0.7;
+}
+
+/* Message Styles */
+.message {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.message.error {
+    background-color: rgba(220, 53, 69, 0.9);
+    border: 1px solid rgba(220, 53, 69, 0.9);
+}
+
+.message.success {
+    background-color: rgba(40, 167, 69, 0.9);
+    border: 1px solid rgba(40, 167, 69, 0.9);
+}
+
+/* Add more styles for dashboard, profile etc. later */ 
